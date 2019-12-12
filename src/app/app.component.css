@@ -1,0 +1,24 @@
+.test{
+  margin-top:4px;
+}
+.tip{
+  text-align: center;
+  font-weight:bold;
+  font-size: 20px;
+}
+.input{
+  text-align: center;
+}
+.divider{
+  width: 5px;
+  height:auto;
+  display:inline-block;
+}
+.title{
+  font-size: 30px;
+  font-weight: bold;
+}
+.read-more{
+  display: inline-block;
+}
+

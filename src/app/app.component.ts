@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NewsService } from './news.service';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Newsapp';
+articles: Array<any>;
+sources: Array<any>;
+apiKey = '79f71650c65b4915adce89ce103cba40';
+  constructor(private newsapi: NewsService,private http: HttpClient) {
+    console.log('app component working');
+  }
+  // tslint:disable-next-line:use-lifecycle-interface
+  ngOnInit() {
+    this.newsapi.getArticles().subscribe(data => this.articles = data['articles']);
+    this.newsapi.getSources().subscribe(data=> this.sources = data['sources']);
+  }
+  searchArticles(source){
+    console.log("selected source is: "+  source);
+    this.newsapi.getArticlesById(source).subscribe(data => this.articles = data['articles']);
+  }
+  reset() {
+    this.newsapi.getArticles().subscribe(data => this.articles = data['articles']);
+  }
 }
