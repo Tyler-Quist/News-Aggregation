@@ -1,4 +1,13 @@
 
+  <mat-list class="list-nav">
+    <mat-list-item class="list-item" *ngFor="let source of sources" (click)="searchArticles(source.id)">
+
+      <button (click)="searchArticles(source.id)"> {{source.name}}</button>
+
+    </mat-list-item>
+  </mat-list>
+
+
 <mat-card class = "tip">
 <h1>
 <span>Headlines</span>

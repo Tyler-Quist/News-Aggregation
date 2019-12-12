@@ -1,5 +1,7 @@
 .test{
   margin-top:4px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 .tip{
   text-align: center;
@@ -21,4 +23,14 @@
 .read-more{
   display: inline-block;
 }
-
+.list-nav{
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: darkgrey; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
