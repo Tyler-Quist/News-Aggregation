@@ -2,7 +2,7 @@
   <mat-list class="list-nav">
     <mat-list-item class="list-item" *ngFor="let source of sources" (click)="searchArticles(source.id)">
 
-      <button (click)="searchArticles(source.id)"> {{source.name}}</button>
+      <button class = "buttons"(click)="searchArticles(source.id)"> {{source.name}}</button>
 
     </mat-list-item>
   </mat-list>
@@ -17,9 +17,9 @@
 <input #ex type='text' placeholder="Enter Source here"
        (keyup.enter)="searchArticles(ex.value)"/>
 
-<button (click)= "searchArticles(ex.value)">Get Articles by Source</button>
+<button class = "search-button" (click)= "searchArticles(ex.value)">Get Articles by Source</button>
   <mat-card class = "divider"></mat-card>
-  <button (click)= "reset()">reset</button>
+  <button class="reset-button"(click)= "reset()">reset</button>
 </mat-card>
 <mat-list>
 <mat-card class = "test" *ngFor= "let article of articles">
